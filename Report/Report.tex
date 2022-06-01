@@ -1,0 +1,161 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{appendix}
+\usepackage{float}
+\usepackage[style=authoryear]{biblatex}
+\usepackage{titling}
+\usepackage[hidelinks=true]{hyperref}
+\usepackage[inner=15mm, outer=15mm, top=15mm, bottom=20mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{booktabs, array, tabularx}
+\usepackage{xcolor}
+\usepackage{wasysym}
+\usepackage{tocloft}
+\usepackage{tikz}
+\usepackage[list=true]{subcaption}
+\usepackage[bottom]{footmisc}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\bibliography{DFM_References}
+
+\lstdefinestyle{C++}{
+  language=C++,
+  numbers=none,
+  stepnumber=1,
+  basicstyle=\scriptsize\ttfamily,
+  numbersep=10pt,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+\lstset{style=C++}
+
+\newcommand{\reqref}[1]{Section \ref{sec:requirements}:\ref{#1}}
+\newcommand{\CITATION}{{\color{red}(CITATION NEEDED)}}
+\newcommand{\TODO}[1]{{\color{red}\textbf{TODO} #1}}
+
+\newcommand{\email}[1]{
+  \small{\textit{\href{mailto:#1}{#1}}}
+}
+
+\title{
+  \huge\textbf{MXEN 2002} \\
+  \vspace{2em}
+  \large\textbf{Project Report}\\
+  \vspace{0.5em}
+}
+
+\preauthor{
+  \vspace{12cm}
+  \begin{center}
+    \begin{tabular}[t]{c}
+}
+
+\author{
+    \textbf{Kee-An Seet} \\
+    \email{19776219@student.curtin.edu.au} \\
+    \textbf{Harry Cassidy} \\
+    \email{20607591@student.curtin.edu.au}
+}
+
+\postauthor{
+    \end{tabular}
+    \par
+  \end{center}
+}
+
+\newcommand{\listequationsname}{\Large \hspace{3mm} List of Equations}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+\addcontentsline{equ}{myequations}{\hspace{8mm}\protect\numberline{\hspace{-2mm}\theequation}#1}\par}
+
+
+\date{}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\pagebreak
+
+\pagenumbering{roman}
+\tableofcontents
+\paragraph{}
+\newpage
+\listoffigures
+\paragraph{}
+\listoftables
+\listofmyequations
+\paragraph{}
+\pagebreak
+
+\pagenumbering{arabic}
+
+\section{Nomenclature}\label{sec:nomen}
+\paragraph{}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l|l}
+      Symbol & Description~ \\ \hline \hline
+      A & Cross-sectional area (mm2) \\ \hline
+      c & Maximum distance from the centroid to outer perimeter (mm)      \\ \hline                          
+    \end{tabular}
+    \caption{Nomenclature}
+    \label{tab:nome}
+  \end{table}
+
+\newpage
+\section{The Task} \label{sec:intro}
+
+\paragraph{}
+  We were tasked with building, wiring, and programming a robot to complete a series of objectives, such as navigating a maze autonomously and moving a camera with a servo as to let the operator identify targets. We were to use the Arduino Mega hardware with a DC motor drive system along with several distance sensors to help achieve the objectives.
+
+\begin{figure}[h]
+  \includegraphics{Images/AutonZone.png}
+  \centering
+  \caption{Supplied example of the task map}
+  \label{fig:intro:map}
+\end{figure}
+
+\subsection{Autonomy Zone}
+  \paragraph{}
+    The "Autonomy Zone" is the section of the map in which the robot is completely self controlled. The idea behind this challenge is that in the event of a connection dsiruption in a dangerous area for humans, the robot should be able to rescue it's self from danger.
+
+\subsection{Manual Control}
+ \paragraph{}
+    The majority of the task is to control the robot through wireless communication. During this period the robot (controlled by the user) must drive through the zone and send a camera feed back to the user for "victim" tags to be recorded.
+
+\TODO {Required Tools}
+\begin{itemize}
+  \item Hand Drill
+  \item Jigsaw
+\end{itemize}
+
+\newpage
+
+\section{Instructions} \label{sec:Instructions}
+\paragraph{ TBW }
+
+\end{document}
