@@ -9,5 +9,5 @@
 \contentsline {paragraph}{}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Manual Control}{2}{subsection.2.2}%
 \contentsline {paragraph}{}{2}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Instructions}{3}{section.3}%
+\contentsline {section}{\numberline {3}Our Solution}{3}{section.3}%
 \contentsline {paragraph}{ TBW }{3}{section.3}%

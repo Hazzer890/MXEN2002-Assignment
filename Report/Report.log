@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  31 MAY 2022 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  1 JUN 2022 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/harry/Documents/Uni/MXEN2002/Report/Report.tex
-(c:/Users/harry/Documents/Uni/MXEN2002/Report/Report.tex
+**c:/Users/harry/Documents/Uni/MXEN2002/Report-GitLinked/MXEN2002-Assignment/Report/Report.tex
+(c:/Users/harry/Documents/Uni/MXEN2002/Report-GitLinked/MXEN2002-Assignment/Report/Report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -1197,24 +1197,24 @@ See the caption package documentation for explanation.
 
 [3] (./Report.aux)
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 683B88442A17029A6463F659C7D32713;547.
+(rerunfilecheck)             Checksum: 504C14C89D524FCCD0A9B16CB195CFBC;550.
 Package logreq Info: Writing requests to 'Report.run.xml'.
 \openout1 = `Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34440 strings out of 478276
- 635248 string characters out of 5850489
- 1305344 words of memory out of 5000000
- 52063 multiletter control sequences out of 15000+600000
- 483408 words of font info for 62 fonts, out of 8000000 for 9000
+ 34437 strings out of 478276
+ 635320 string characters out of 5850489
+ 1304344 words of memory out of 5000000
+ 52061 multiletter control sequences out of 15000+600000
+ 483071 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,120p,1176b,848s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Report.pdf (6 pages, 117668 bytes).
+ 84i,8n,120p,1213b,848s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on Report.pdf (6 pages, 115844 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
