@@ -151,6 +151,77 @@
 \newpage
 
 \section{Our Solution} \label{sec:Solution}
-\paragraph{ TBW }
+\subsection{Joystick Drive}
+  \paragraph{}
+    To be able to control the robot manually, we implemented a joystick drive system, where joystick inputs on the controller would result in movement of the robot. Since the raw joystick outputs have a range from 0-1024, they were first scaled by a factor of 1/4 (to bring it within 0-256 range) and then transmitted to the robot via the XBees.
+    These values were processed on the robot's end by mapping them from 0 - 256 to -378 - 378, which were used to calculate 2 variables, leftValue and rightValue, where $leftValue = joyY + joyX$ and $rightValue = joyY - joyX$.
+    This achieves a differential drive effect, where both left and right motors react to the joystick Y position for forwards and backwards drive, but each react in opposite magntidues depending on the joystick X position, resulting in the turning of the robot.
+  \paragraph{}
+    To convert these drive values into values that can run the motors, we opted for a PWM drive system, where PWM signals are used to control the speed of each DC motor independently.
+\subsection{PWM Calculations}
+  \paragraph{}
+    We aimed to have our duty cycle range between 0.05s and 0.1s.
+    A Phase Correct PWM mode was chosen as it allowed for the widest range of possible values and prescaler values.
+    We also settled on prescaler value of 8 as it allowed the resulting COMP value to be within the 0-10000 range that the ADC can read at.
 
+    Phase Correct PWM: f(base) = f(microcontroller)/(2*TOP*PRE)
+
+    TOP = 10000, PRE = 8
+
+    $f(base) = (16*10^6) / (2*20000*8) = 50Hz$
+    
+    $Period = 0.02s$
+
+    $Duty Cycle range: 0.05s - 0.1s$
+
+    $Duty Cycle = COMP/TOP$
+
+    $COMP range: (20000*0.05)-(20000*0.01) = 1000-2000$
+
+    With this information we can choose which bits to set the PWM registers to. Our drivetrain used the TCCR1A and TCCR1B registers.
+
+    As we decided to use PWM Phase correct (mode 10), we set the WGM11 and WGM13 bits in the PWM registers to 1. This mode meant that our TOP value of 20000 would be set in the ICR1 register.
+    We want the PWM to clear on up count and compare on down count, so we set the COM1B1 bit to 1.
+    Our prescaler is 8 which corresponds to setting only the CS11 bit to 1.
+
+    The following table shows the bits set in the TCCR1A and TCCR1B PWM registers that control the drivetrain:
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{l|l|l|l|l|l|l|l|l}
+      Register & COM1A1 & COM1A0 & COM1B1 & COM1B0 & COM1C1 & COM1C0 & WGM11 & WGM10 \\ \hline \hline
+      TCCR1A & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\ \hline                        
+    \end{tabular}
+    \caption{TCCR1A register}
+    \label{tab:nome}
+  \end{table}
+
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{l|l|l|l|l|l|l|l|l}
+      Register & ICNC1 & ICES1 & - & WGM13 & WGM12 & CS12 & CS11 & CS10 \\ \hline \hline
+      TCCR1A & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\ \hline                        
+    \end{tabular}
+    \caption{TCCR1B register}
+    \label{tab:nome}
+  \end{table}
+
+  \newpage
+
+  \section{Program logic flowcharts} \label{sec:Flowchart}
+  \subsection{Robot.c program logic}
+  \begin{figure}[h]
+    \includegraphics[width=0.7\columnwidth]{Images/robot_c.png}
+    \centering
+    \caption{Flowchart of Robot.c code}
+    \label{fig:Flowchart:robot_c}
+  \end{figure}
+
+  \subsection{Autonomous code program logic}
+  \begin{figure}[h]
+    \includegraphics[width=0.9\columnwidth]{Images/auton.png}
+    \centering
+    \caption{Flowchart of autonomous mode code}
+    \label{fig:Flowchart:auton}
+  \end{figure}
+  
 \end{document}
