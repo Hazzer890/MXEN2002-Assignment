@@ -141,7 +141,7 @@
 
 \subsection{Autonomy Zone}
   \paragraph{}
-    The "Autonomy Zone" is the section of the map in which the robot is completely self controlled. The idea behind this challenge is that in the event of a connection dsiruption in a dangerous area for humans, the robot should be able to rescue it's self from danger.
+    The "Autonomy Zone" is the section of the map in which the robot is completely self controlled. The idea behind this challenge is that in the event of a connection dsiruption in a dangerous area for humans, the robot should be able to rescue it's self from danger without external control.
 
 \subsection{Manual Control}
  \paragraph{}
@@ -176,52 +176,4 @@
 
     $Duty Cycle = COMP/TOP$
 
-    $COMP range: (20000*0.05)-(20000*0.01) = 1000-2000$
-
-    With this information we can choose which bits to set the PWM registers to. Our drivetrain used the TCCR1A and TCCR1B registers.
-
-    As we decided to use PWM Phase correct (mode 10), we set the WGM11 and WGM13 bits in the PWM registers to 1. This mode meant that our TOP value of 20000 would be set in the ICR1 register.
-    We want the PWM to clear on up count and compare on down count, so we set the COM1B1 bit to 1.
-    Our prescaler is 8 which corresponds to setting only the CS11 bit to 1.
-
-    The following table shows the bits set in the TCCR1A and TCCR1B PWM registers that control the drivetrain:
-  \begin{table}[h]
-    \centering
-    \begin{tabular}{l|l|l|l|l|l|l|l|l}
-      Register & COM1A1 & COM1A0 & COM1B1 & COM1B0 & COM1C1 & COM1C0 & WGM11 & WGM10 \\ \hline \hline
-      TCCR1A & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\ \hline                        
-    \end{tabular}
-    \caption{TCCR1A register}
-    \label{tab:nome}
-  \end{table}
-
-  \begin{table}[h]
-    \centering
-    \begin{tabular}{l|l|l|l|l|l|l|l|l}
-      Register & ICNC1 & ICES1 & - & WGM13 & WGM12 & CS12 & CS11 & CS10 \\ \hline \hline
-      TCCR1A & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\ \hline                        
-    \end{tabular}
-    \caption{TCCR1B register}
-    \label{tab:nome}
-  \end{table}
-
-  \newpage
-
-  \section{Program logic flowcharts} \label{sec:Flowchart}
-  \subsection{Robot.c program logic}
-  \begin{figure}[h]
-    \includegraphics[width=0.7\columnwidth]{Images/robot_c.png}
-    \centering
-    \caption{Flowchart of Robot.c code}
-    \label{fig:Flowchart:robot_c}
-  \end{figure}
-
-  \subsection{Autonomous code program logic}
-  \begin{figure}[h]
-    \includegraphics[width=0.9\columnwidth]{Images/auton.png}
-    \centering
-    \caption{Flowchart of autonomous mode code}
-    \label{fig:Flowchart:auton}
-  \end{figure}
-  
 \end{document}
