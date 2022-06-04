@@ -168,13 +168,15 @@
 
       \subsection{Abandoned features}
         \paragraph{}
-          Throughout the construction of our robot we developed several ideas that we didnt end up using for various reasons. ...
-        
-  
-\newpage
-  
-    \section{Program logic flowcharts} \label{sec:Flowchart}
-      \subsection{Robot.c program logic}
+          Throughout the construction of our robot we developed several ideas that we didnt end up using for various reasons. 
+          Some of our most innovative features include:
+          \begin{enumerate}
+            \item Raising the camera on a platformwith pan AND tilt as to get a better vantage point for quicker symbol regconition, we didn't use this in the end due to the low quality of the camera feed
+            \item We had a semi-working autonomous code written in two lines in order to speed up the code, however due to the 100hz data transfer protocol we used for our xbee's the shorter code was negligible.
+            \item A custom controller using the base of an xbox 360 controller was developed for a short amount of time to allows us to control the robot more precisely and with more inputs (for the camera plan). Without the camera the controller was not feasible and as there was no need to upgrade any aspect.
+          \end{enumerate}
+    \newpage
+      \subsection{Robot.c Program Logic}
         \begin{figure}[h]
           \includegraphics[width=0.6\columnwidth]{Images/robot_c.png}
           \centering
@@ -182,12 +184,38 @@
           \label{fig:Flowchart:robot_c}
         \end{figure}
   
-      \subsection{Autonomous code program logic}
+      \subsection{Autonomous Code Program Logic}
         \begin{figure}[h]
           \includegraphics[width=0.6\columnwidth]{Images/auton.png}
           \centering
           \caption{Flowchart of autonomous mode code}
           \label{fig:Flowchart:auton}
         \end{figure}
+
+  \newpage 
+        \section{Project Perfomance} \label{sec:Perfomance}
+          \subsection{Inspection}
+            \paragraph{}
+              The marks we lost during the inspection of the robot were directly related to our carelessness when reading the project direction. We failed to achieve the "calibrate sensors (cm or mm) and output to the lcd" as we only output the calbrated numbers to the screen and not the units to accompany them. After inspection we programmed the units onto the display in the time before our run.
+
+          \subsection{Autonomous}
+            \paragraph{}
+              Whilst our autonomous driving was significantly better at navigating than our human operator, we failed to accomodate for the quality and framerate of the camera. As such our robot traversed the maze quicker than we could register the victim's symbol. In order to rectify this we would either implement periodic stops to sweep the area with the camera or we would intentionally slow down the autonomous code. 
+
+          \subsection{Manual Control}
+            \paragraph{}
+              We had no major issues during manual control. However due to our unfortunate circumstances whilst our robot was autonomous we had to circle back into the maze to collect the symbols for the missed victims, despite doing so we completed the entire course and identified all victims within the specifed time of 5 minutes.
+
+          \subsection{Successes and Improvements}
+            \begin{table}[htbp]
+              \centering
+                \begin{tabularx}{\textwidth}{bb}
+                  \hline
+                  \heading{Successes} & \heading{Improvements} \\ \hline \hline
+                    Despite being too fast, our autonomous code had no issues traversing the maze flawlessly & Expand our autonomous code to include periodic stops to sweep the area \\ \hline
+                    We had no communication error during our run, in part due to our soldered connections. & uhh idk !!!! \\ \hline
+                \end{tabularx}
+              \caption{Issues + Solutions}
+            \end{table}
 
 \end{document}

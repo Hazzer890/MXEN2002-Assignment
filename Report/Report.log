@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  3 JUN 2022 08:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.28)  4 JUN 2022 14:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,7 +266,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout6 = `Report.lot'.
 
  [2] [1]
-<Images/AutonZone.png, id=110, 224.33812pt x 299.61937pt>
+<Images/AutonZone.png, id=132, 224.33812pt x 299.61937pt>
 File: Images/AutonZone.png Graphic file (type png)
 <use Images/AutonZone.png>
 Package pdftex.def Info: Images/AutonZone.png  used on input line 72.
@@ -290,40 +290,50 @@ Overfull \hbox (12.13322pt too wide) in paragraph at lines 161--165
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5] [6]
-<Images/robot_c.png, id=147, 449.42906pt x 621.82312pt>
+<Images/robot_c.png, id=172, 449.42906pt x 621.82312pt>
 File: Images/robot_c.png Graphic file (type png)
 <use Images/robot_c.png>
-Package pdftex.def Info: Images/robot_c.png  used on input line 179.
+Package pdftex.def Info: Images/robot_c.png  used on input line 181.
 (pdftex.def)             Requested size: 234.00238pt x 323.75787pt.
-<Images/auton.png, id=148, 542.025pt x 468.24937pt>
+<Images/auton.png, id=173, 542.025pt x 468.24937pt>
 File: Images/auton.png Graphic file (type png)
 <use Images/auton.png>
-Package pdftex.def Info: Images/auton.png  used on input line 187.
+Package pdftex.def Info: Images/auton.png  used on input line 189.
 (pdftex.def)             Requested size: 234.00238pt x 202.15067pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <./Images/robot_c.PNG>] [8 <./Images/auton.PNG>] (./Report.aux)
+[7 <./Images/robot_c.PNG>] [8 <./Images/auton.PNG>]
+Underfull \hbox (badness 1502) in paragraph at lines 217--217
+[]|\OT1/cmr/m/n/12 Despite be-ing too fast, our au-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+\OT1/cmr/m/n/12 tonomous code had no is-sues
+ []
+
+[9] (./Report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: E57EE75AB93062BFC47A8BF7F5D1402A;1782.
+(rerunfilecheck)             Checksum: D6A55EF71744A36CFD47A55C5B865F33;2290.
  ) 
 Here is how much of TeX's memory you used:
- 8507 strings out of 478276
- 134024 string characters out of 5850489
- 425983 words of memory out of 5000000
- 26571 multiletter control sequences out of 15000+600000
+ 8523 strings out of 478276
+ 134209 string characters out of 5850489
+ 425977 words of memory out of 5000000
+ 26575 multiletter control sequences out of 15000+600000
  475064 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,10n,63p,475b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,63p,547b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Report.pdf (11 pages, 148463 bytes).
+Output written on Report.pdf (12 pages, 152821 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
